@@ -1,10 +1,8 @@
 import express from 'express';
-import dotenv  from 'dotenv';
 import productRoutes from "./routes/products.js"
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-dotenv.config()
 const port=3000;
 const mongo_uri="mongodb+srv://sonnymad33:3K5odh4vc2O0stwg@products-cluster.xl0ltbt.mongodb.net/Products-Cluster?retryWrites=true&w=majority&appName=Products-Cluster";
 
