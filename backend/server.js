@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json())
 
 app.use(cors({
-    origin: 'https://clothes-store-client.vercel.app/'
+    origin: 'https://clothes-store-client.vercel.app'
   }));
 
 // routes
