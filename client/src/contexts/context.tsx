@@ -116,7 +116,6 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       });
 
       setItems(data);
-      console.log(data);
     } catch (error) {
       if (axios.isCancel(error)) {
         console.log("Request cancelled", error.message);
