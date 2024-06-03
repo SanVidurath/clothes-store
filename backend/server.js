@@ -5,6 +5,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 dotenv.config()
+const port=3000;
+const mongo_uri=mongodb+srv://sonnymad33:3K5odh4vc2O0stwg@products-cluster.xl0ltbt.mongodb.net/Products-Cluster?retryWrites=true&w=majority&appName=Products-Cluster;
 
 const app = express();
 
@@ -24,10 +26,10 @@ app.use(cors({
 app.use("/", productRoutes);
 
 // connect to database
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(mongo_uri)
     .then(()=>{
-        app.listen(process.env.PORT, ()=>{
-            console.log('connected to db and listening on port', process.env.PORT);
+        app.listen(port, ()=>{
+            console.log('connected to db and listening on port', port);
         })
     })
     .catch((error)=>{
