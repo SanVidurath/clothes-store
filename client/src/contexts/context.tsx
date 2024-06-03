@@ -60,7 +60,7 @@ interface AppProviderProps {
   children: ReactNode;
 }
 
-const resourceURL = "http://localhost:3000/products";
+const resourceURL = "https://clothes-store-server.vercel.app/products";
 
 export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [items, setItems] = useState<Item[] | []>([]);
